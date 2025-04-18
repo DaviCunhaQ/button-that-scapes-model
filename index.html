@@ -1,0 +1,89 @@
+"<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      h1 {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 16rem;
+        height: auto;
+      }
+      #yes,
+      #no {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7rem;
+        height: 1.25rem;
+      }
+      #no {
+        position: absolute;
+      }
+      #yes {
+        margin-left: 8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form onsubmit="handleMessage()">
+        <h1>Will you... ?</h1>
+        <div>
+          <button id="no" type="button" onmouseover="scape()" onclick="scape()">
+            no
+          </button>
+          <button id="yes" type="submit">yes</button>
+        </div>
+      </form>
+    </main>
+    <script>
+      function handleMessage(){      
+        alert("Message...")
+      }    
+      
+      function scape(){
+        var noButton = document.getElementById("no")   
+
+        var windowWidth = window.innerWidth;      
+        var windowHeight = window.innerHeight;   
+
+        var maxX = windowWidth - noButton.offsetWidth;      
+        var maxY = windowHeight - noButton.offsetHeight;  
+
+        var randomX = Math.floor(Math.random() * maxX);      
+        var randomY = Math.floor(Math.random() * maxY);    
+
+        noButton.style.left = randomX + "px";      
+        noButton.style.top = randomY + "px";    
+      }
+    </script>
+  </body>
+</html>
+"
