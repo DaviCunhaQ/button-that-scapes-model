@@ -1,2 +1,2 @@
 VIEW MODEL:
-<a href="https://davicunhaq.github.io/button-that-scapes-model/" target="_blank">visit</a>
+<a href="https://button-that-scapes-model.vercel.app/" target="_blank">visit</a>
